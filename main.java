@@ -1,9 +1,5 @@
 import java.util.Scanner;
  
-/**
- * Class utama (driver) yang menampilkan menu dan mengatur alur program
- * Sistem Pengelolaan Penyewaan Kendaraan Tambang.
- */
 public class Main {
  
     private static Scanner scanner = new Scanner(System.in);
@@ -12,12 +8,11 @@ public class Main {
     public static void main(String[] args) {
         int pilihan;
  
-        // Perulangan utama: program terus berjalan sampai user pilih menu Keluar
         do {
             tampilkanMenu();
             pilihan = bacaPilihanMenu();
  
-            // Percabangan untuk memilih menu
+           
             switch (pilihan) {
                 case 1:
                     tambahData();
@@ -55,7 +50,7 @@ public class Main {
         System.out.print("Pilih menu (1-5): ");
     }
  
-    // Validasi input menu: harus berupa angka
+    
     private static int bacaPilihanMenu() {
         int pilihan = -1;
         boolean valid = false;
@@ -127,7 +122,7 @@ public class Main {
         }
     }
  
-    // Validasi: input string tidak boleh kosong
+   
     private static String bacaStringTidakKosong(String pesan) {
         String input;
         while (true) {
@@ -141,7 +136,7 @@ public class Main {
         return input;
     }
  
-    // Validasi: input harus angka desimal dan lebih dari 0
+    
     private static double bacaDoublePositif(String pesan) {
         double nilai = -1;
         boolean valid = false;
